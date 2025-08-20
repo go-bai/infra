@@ -1,6 +1,7 @@
 terraform {
   required_version = ">= 1.5.0, < 1.6.0"
   backend "gcs" {
+    # 配置 terraform 状态存储, 使用 GCS 作为后端, 存储在 terraform/orchestration/state 目录下, 需要填写 bucket 和 prefix
     prefix = "terraform/orchestration/state"
   }
   required_providers {

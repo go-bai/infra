@@ -130,6 +130,13 @@ apply:
 	.tfplan.$(ENV)
 	@ rm .tfplan.$(ENV)
 
+.PHONY: refresh
+refresh:
+	@ printf "Refreshing Terraform for env: `tput setaf 2``tput bold`$(ENV)`tput sgr0`\n\n"
+	./scripts/confirm.sh $(TERRAFORM_ENVIRONMENT)
+	$(tf_vars) \
+	$(TF) refresh
+
 .PHONY: plan-without-jobs
 plan-without-jobs:
 	@ printf "Planning Terraform for env: `tput setaf 2``tput bold`$(ENV)`tput sgr0`\n\n"

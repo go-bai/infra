@@ -117,7 +117,7 @@ variable "cluster_name" {
 variable "root_volume_disk_size_gb" {
   description = "The size, in GB, of the root disk volume on each Consul node."
   type        = number
-  default     = 200
+  default     = 20
 }
 
 variable "root_volume_disk_type" {

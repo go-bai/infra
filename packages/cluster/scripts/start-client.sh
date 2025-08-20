@@ -35,7 +35,7 @@ sudo mkdir -p /orchestrator/build
 
 # Add swapfile
 SWAPFILE="/swapfile"
-sudo fallocate -l 100G $SWAPFILE
+sudo fallocate -l 50G $SWAPFILE
 sudo chmod 600 $SWAPFILE
 sudo mkswap $SWAPFILE
 sudo swapon $SWAPFILE

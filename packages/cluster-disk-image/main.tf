@@ -27,7 +27,6 @@ resource "google_compute_subnetwork" "packer_subnetwork" {
   network       = google_compute_network.packer_network.id
 }
 
-
 resource "google_compute_firewall" "internal_remote_connection_firewall_ingress" {
   name    = "${var.network_name}-firewall-ingress"
   network = google_compute_network.packer_network.name
